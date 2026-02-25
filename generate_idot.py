@@ -353,8 +353,8 @@ def main():
             reactions = build_manual_reactions(read_manual_columns(wb["Manual Columns"]))
         elif mode == "manual_rows":
             if "Manual" not in wb.sheetnames:
-                sys.exit("Error: mode is 'manual_rows' but no 'Manual' sheet found.")
-            reactions = build_manual_reactions(read_manual_rows(wb["Manual"]))
+                sys.exit("Error: mode is 'manual_rows' but no 'Manual Rows' sheet found.")
+            reactions = build_manual_reactions(read_manual_rows(wb["Manual Rows"]))
         else:
             sys.exit(f"Error: unknown mode '{mode}'. Use 'combinatorial', 'manual_rows', or 'manual_columns'.")
 
